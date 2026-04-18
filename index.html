@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Long BĐS Tin Tức Bất Động Sản</title>
+	<meta name="description" content="Cập Nhật Tin Tức Bất Động Sản, Phân Tích Thị Trường Chuyên Sâu">
+	<style>
+	*{box-sizing:border-box}
+	body{margin:0;font-family:Arial,sans-serif;background:#f3f4f6;color:#334155}
+	a{text-decoration:none}
+	img{max-width:100%;display:block}
+	.wrap{max-width:1200px;margin:0 auto;padding:18px 14px}
+	.section{margin-bottom:26px}
+	.card-box{background:#fff;border-radius:18px;border:1px solid #e5e7eb;box-shadow:0 4px 18px rgba(0,0,0,.05)}
+	.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+	.hero-left,.hero-right{background:#fff;border-radius:18px;border:1px solid #e5e7eb;overflow:hidden;height:100%}
+	.hero-right{display:flex;flex-direction:column;justify-content:center}
+	.hero-banner{width:100%;aspect-ratio:16/9;object-fit:cover;background:#e5e7eb}
+	.hero-right{padding:24px 26px;text-align:center}
+	.hero-right h1{margin:8px 0 18px;font-size:26px;line-height:1.3;color:#d97706}
+	.hero-right p{margin:0 0 12px;font-size:16px;line-height:2;color:#444}
+	.hero-right strong{color:#0f766e}
+	.check-links{display:flex;flex-wrap:wrap;gap:14px 16px;justify-content: center;padding:18px 10px 4px;font-size:18px}
+	.check-links a{color:#1f5f86;}
+	.check-links .ok{color:#16a34a;font-weight:700;margin-right:4px}
+	.why-icons{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center;padding:22px 10px 10px}
+	.why-icons h3{margin:0 0 8px;font-size:20px;color:#374151}
+	.why-icons p{margin:0;font-size:16px;line-height:1.8;color:#4b5563}
+	.feed-box{padding:12px}
+	.info-two{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:22px 10px 8px;text-align:center}
+	.info-two h2{margin:0 0 14px;font-size:22px;color:#1f6f96}
+	.info-two p{margin:0 0 10px;font-size:18px;line-height:1.9;color:#4b5563}
+	.info-two a{color:#1f5f86;text-decoration:none;font-weight:700}
+	.why-choose{background:#efefef;padding:28px 18px}
+	.why-choose h2{margin:0 0 24px;text-align:center;font-size:28px;color:#d97706}
+	.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;text-align:center}
+	.why-item h3{margin:0 0 10px;font-size:20px;color:#1f6f96}
+	.why-item p{margin:0;font-size:17px;line-height:1.8;color:#4b5563}
+	.footer-box{padding:26px 12px 18px}
+	.footer-col h3{margin:0 0 14px;font-size:24px;color:#d97706}
+	.footer-col h3 .blue{color:#1f6f96}
+	.footer-col p,.footer-col li{font-size:17px;line-height:1.9;color:#4b5563}
+	.footer-col ul{margin:0;padding-left:0;list-style:none}
+	.copy{margin-top:20px;padding-top:18px;border-top:1px solid #e5e7eb;text-align:center;color:#6b7280;font-size:15px}
+	.scroller{width:100%;overflow-x:auto;overflow-y:hidden;-ms-overflow-style:none;scrollbar-width:none;cursor:grab;padding-bottom:4px;-webkit-overflow-scrolling:touch;touch-action:pan-x}
+	.scroller::-webkit-scrollbar{display:none}
+	.scroller.dragging{cursor:grabbing;user-select:none}
+	.row{display:flex;flex-wrap:nowrap;gap:16px;width:100%}
+	.card{flex:0 0 calc((100% - 48px)/4);max-width:calc((100% - 48px)/4);min-width:0;min-height:450px;background:#fff;border:1px solid #dbe3ee;border-radius:22px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05);transition:.2s ease}
+	.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.10)}
+	.thumb-wrap{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;background:#e5e7eb}
+	.thumb{width:100%;height:100%;object-fit:cover;display:block}
+	.badge-left{position:absolute;top:12px;left:12px;z-index:3;display:flex;gap:6px;flex-wrap:wrap}
+	.badge-chip{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;color:#fff;line-height:1;box-shadow:0 2px 6px rgba(0,0,0,.14)}
+	.badge-orange{background:#f59e0b}
+	.badge-red{background:#ef4444}
+	.badge-corner{position:absolute;top:0;right:0;width:92px;height:92px;overflow:hidden;z-index:2}
+	.badge-corner span{position:absolute;top:-3px;right:-45px;width:120px;height:40px;text-align:center;background:#f97316;color:#fff;font-size:12px;font-weight:700;padding:16px 0;transform:rotate(45deg);box-shadow:0 2px 6px rgba(0,0,0,.16)}
+	.content{padding:14px 10px 16px}
+	.title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:50px;margin:0 0 8px;color:#1f2937;font-size:17px;line-height:1.45;font-weight:700}
+	.title:hover{color:#d9480f}
+	.desc{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:66px;color:#64748b;font-size:14px;line-height:1.55;margin-bottom:10px}
+	.meta{display:grid;gap:6px;margin-bottom:12px}
+	.meta-row{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#64748b;font-size:14px;line-height:1.2}
+	.meta-row span:last-child{overflow:hidden;text-overflow:ellipsis}
+	.meta-ico{width:16px;flex:0 0 16px;text-align:center;color:#64748b;font-size:12px;margin-top:2px}
+	.sep{height:1px;background:#e2e8f0;margin:10px 0 12px}
+	.bottom{display:flex;align-items:center;justify-content:space-between;gap:10px}
+	.price{color:#f97316;font-size:18px;font-weight:800;line-height:1.2}
+	.btn{display:inline-block;padding:8px 14px;border-radius:12px;background:#0f766e;color:#fff;font-size:14px;font-weight:700;white-space:nowrap}
+	.btn:hover{opacity:.92}
+	.loading,.empty{text-align:center;color:#64748b;padding:28px 10px;font-size:18px}
+	.contact-cta{margin-top:12px;text-align:center}.btn-contact{display:inline-block;background:#FF9800;color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;text-decoration:none;transition:all .25s}.btn-contact:hover{background:#FFC107;transform:translateY(-2px)}
+	.footer-scroll{width:100%;overflow-x:auto;overflow-y:hidden;-ms-overflow-style:none;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-behavior:smooth}
+	.footer-scroll::-webkit-scrollbar{display:none}
+	.footer-grid{display:grid;grid-auto-flow:column;gap:16px;grid-auto-columns:calc((100% - 32px)/3)}
+	.footer-col{min-width:0;scroll-snap-align:start;scroll-snap-stop:always;background:#fff;border:0 solid #e5e7eb;border-radius:16px;padding:18px 16px}
+	@media (max-width:991px){.footer-grid{grid-auto-columns:calc((100% - 16px)/2)}}
+	@media (max-width:640px){.footer-grid{gap:12px;grid-auto-columns:100%}}
+	@media (max-width:991px){
+		.hero{grid-template-columns:1fr}
+		.why-icons{grid-template-columns:repeat(2,1fr)}
+		.info-two{grid-template-columns:1fr}
+		.why-grid{grid-template-columns:1fr}
+		.card{flex:0 0 calc((100% - 16px)/2);max-width:calc((100% - 16px)/2);min-width:0}
+	}
+	@media (max-width:640px){
+		.wrap{padding:10px 8px}
+		.hero-right{padding:18px 16px}
+		.hero-right h1{font-size:22px}
+		.hero-right p,.info-two p,.footer-col p,.footer-col li,.why-item p,.why-icons p{font-size:16px}
+		.check-links{font-size:16px}
+		.why-icons{grid-template-columns:1fr}
+		.row{gap:12px}
+		.card{flex:0 0 100%;max-width:100%;min-width:0}
+		.title{font-size:16px;min-height:58px}
+		.desc{font-size:13px;min-height:60px}
+		.meta-row{font-size:13px}
+		.price{font-size:17px}
+		.btn{font-size:13px;padding:9px 12px}
+	}
+	</style>
+</head>
+
+<body style="caret-color: auto;">
+	<div class="wrap">
+		<section class="section hero">
+			<div class="hero-left">
+				<img class="hero-banner" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQZgDIxY2QLQnrfdCE6XPL8tQevKXIAsLmFMzrXWsuWWxvwxsB6b9PZ5pHI3BZ2JJlE5jOxby0KgeecMb5IwC5dKmf9sznyQOXRBvbWgnPVmtQt8Va4hrVX9ODviOMlLfmmef6pLFLusRWoqq6QTty0lQaocNaT8dn0FsFrKIQb2C63OYM6TXAkkPUirQ/s662/long-bds.jpg" alt="Long BĐS">
+				<section class="section">
+					<div class="check-links">
+					  <a href="https://long-bds.blogspot.com/search/label/20-den-50-ty"><span class="ok">✔</span>Nhà vip</a>
+					  <a href="https://long-bds.blogspot.com/search/label/tren-50-ty"><span class="ok">✔</span>Trên 50 tỷ</a>
+					  <a href="https://long-bds.blogspot.com/search/label/tin-tuc"><span class="ok">✔</span>Tin tức</a>
+					  <a href="https://long-bds.blogspot.com/search/label/3-den-5-ty"><span class="ok">✔</span>Nhà tầm trung đẹp</a>
+					  <a href="https://long-bds.blogspot.com/search/label/5-den-8-ty"><span class="ok">✔</span>5-8 tỷ</a>
+					  <a href="https://long-bds.blogspot.com/search/label/shophouse"><span class="ok">✔</span>Nhà phố thương mại</a>
+					  <a href="https://long-bds.blogspot.com/search/label/nha-vuon"><span class="ok">✔</span>Nhà vườn nghỉ dưỡng</a>
+					  <a href="https://long-bds.blogspot.com/search/label/biet-thu"><span class="ok">✔</span>Biệt thự cao cấp</a>
+					</div>
+				</section>
+				<div class="contact-cta">
+					<a href="tel:0965366247" class="btn-contact">📞 Liên hệ ngay</a>
+				</div>
+			</div>
+			<div class="hero-right">
+				<h1>Cập Nhật Tin Tức Bất Động Sản, Phân Tích Thị Trường Chuyên Sâu</h1>
+				<p>Bạn đang tìm kiếm những thông tin mới nhất để đưa ra quyết định đầu tư chính xác? Tại Long BĐS, chúng tôi không chỉ kết nối giao dịch mà còn là kênh tổng hợp <b>tin tức</b> nhà đất TP.HCM nhanh chóng, dữ liệu được cập nhật mới mỗi giờ.</p>
+				<p>Trang chuyên cung cấp <b><a href="https://long-bds.blogspot.com/search/label/tin-tuc">tin tức</a></b> đa dạng: từ biến động giá cả thị trường, tiến độ các dự án hạ tầng giao thông đến những thay đổi mới nhất về luật đất đai và thủ tục pháp lý.</p>
+				<p>Mọi nội dung đều được biên tập với tiêu chí: <b>Kịp thời - Khách quan - Chính xác</b>. Độc giả có thể dễ dàng nắm bắt <b>tin tức</b> theo từng khu vực như Gò Vấp, Quận 12, Thủ Đức, hoặc theo dõi các phân tích về phân khúc giá từ 2 tỷ đến dưới 5 tỷ để nhận diện cơ hội đầu tư tốt nhất.</p>
+			</div>
+		</section>
+
+		<section class="section card-box">
+			<div class="why-icons">
+				<div>
+					<h3>Thị trường 24h</h3>
+					<p>Cập nhật diễn biến giá bán, lượng tin đăng và tình hình giao dịch thực tế tại các điểm nóng TP.HCM.</p>
+				</div>
+				<div>
+					<h3>Quy hoạch hạ tầng</h3>
+					<p>Điểm tin về các dự án đường vành đai, cao tốc và các khu đô thị mới đang đón đầu làn sóng đầu tư.</p>
+				</div>
+				<div>
+					<h3>Chính sách &amp; Pháp lý</h3>
+					<p>Phân tích các nghị định mới, hướng dẫn làm sổ hồng và các quy định về thuế phí nhà đất.</p>
+				</div>
+				<div>
+					<h3>Tiêu điểm đầu tư</h3>
+					<p>Các bài viết đánh giá tiềm năng khu vực, giúp nhà đầu tư lọc được "kèo thơm" giữa biến động thị trường.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section card-box">
+			<div class="feed-box">
+				<div id="app" class="loading">Đang tải dữ liệu...</div>
+			</div>
+		</section>
+
+		<section class="section card-box">
+			<div class="info-two">
+				<div>
+					<h2>Kinh Nghiệm Khai Thác Tin Tức Đầu Tư</h2>
+					<p>Khi theo dõi <b><a href="https://long-bds.blogspot.com/search/label/tin-tuc">tin tức</a></b> bất động sản, nhà đầu tư cần biết cách sàng lọc thông tin từ những nguồn uy tín để tránh làn sóng "sốt ảo". Hãy ưu tiên các tin tức về quy hoạch sử dụng đất và tình trạng thực hiện các dự án giao thông trọng điểm trong tương lai.</p>
+					<p>Bên cạnh đó, việc cập nhật thường xuyên các biến động về lãi suất vay mua nhà và chính sách tín dụng sẽ giúp bạn chủ động về dòng tiền. Một nguồn <b>tin tức</b> chất lượng sẽ là kim chỉ nam giúp bạn mua được nhà đất giá tốt và đón đầu biên độ tăng giá bền vững.</p>
+				</div>
+				<div>
+					<h2>Xem Tin Tức Bất Động Sản Ở Đâu?</h2>
+					<p>Long BĐS cung cấp chuyên trang <b><a href="https://long-bds.blogspot.com/search/label/tin-tuc">tin tức</a></b> tổng hợp liên tục, giúp người mua và người bán dễ dàng kết nối với nhịp sống của thị trường. Bạn có thể lọc nhanh thông tin theo loại hình bất động sản hoặc khu vực quan tâm để không bỏ lỡ bất kỳ cơ hội đầu tư hay thay đổi chính sách quan trọng nào.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section why-choose card-box">
+			<h2>Tại Sao Theo Dõi Tin Tức Tại Long BĐS?</h2>
+			<div class="why-grid">
+				<div class="why-item">
+					<h3>Cập nhật liên tục</h3>
+					<p>Chuyên săn tìm và tổng hợp các nguồn <b>tin tức</b> hàng ngộp, hàng cắt lỗ và diễn biến giá thực từ chính chủ.</p>
+				</div>
+				<div class="why-item">
+					<h3>Nội dung thực 100%</h3>
+					<p>Nói không với tin đồn thất thiệt, cam kết kiểm chứng thông tin về diện tích, pháp lý và quy hoạch.</p>
+				</div>
+				<div class="why-item">
+					<h3>Tư vấn từ chuyên gia</h3>
+					<p>Phân tích thị trường chuyên sâu từ dữ liệu thực tế, giúp bạn mua rẻ - bán nhanh, tối ưu hóa dòng vốn.</p>
+				</div>
+			</div>
+		</section>
+
+		<footer class="section card-box footer-box">
+			<div class="footer-scroll" id="footer-scroller">
+				<div class="footer-grid">
+					<div class="footer-col">
+						<h3><span class="blue">Long</span> BĐS</h3>
+						<p>👉 Chuyên cập nhật <b>tin tức</b> BĐS giá rẻ và hàng ngộp mới nhất.</p>
+						<p>👉 Lọc tin theo biến động thị trường, khu vực và tiềm năng sinh lời.</p>
+					</div>
+					<div class="footer-col">
+						<h3 style="color:#1f6f96">Pháp lý</h3>
+						<ul>
+							<li>✓ About Us</li>
+							<li>✓ Cookie policy</li>
+							<li>✓ Privacy Policy</li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h3 style="color:#1f6f96">Liên hệ</h3>
+						<ul>
+							<li>📞 0965.366.247</li>
+							<li>✉️ tanhqs@gmail.com</li>
+							<li>📍 T15 P. An Phú Đông, Q.12, TP.HCM</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copy">Copyright © Long BĐS. All rights reserved.</div>
+		</footer>
+	</div>
+
+	<script>
+		function cleanText(e){return(e||"").replace(/<br\s*\/?>/gi," ").replace(/<[^>]*>/g," ").replace(/\s+/g," ").trim()}function cleanTitle(e){return cleanText(e).replace(/^[🔥⭐✔✅]+\s*/,"").trim()}function extractTag(e,t){var a=new RegExp("\\["+t+"\\]([\\s\\S]*?)\\[\\/"+t+"\\]","i"),r=e.match(a);return r?cleanText(r[1]):""}function extractPrice(e,t){var a=(e+" "+t).toLowerCase(),r=a.match(/\[giaban\]([\s\S]*?)\[\/giaban\]/i);return r?cleanText(r[1]):(r=a.match(/(?:giá|chỉ)\s*([0-9]+(?:[.,][0-9x]+)?)\s*t[ỷy]/i))||(r=a.match(/([0-9]+(?:[.,][0-9x]+)?)\s*t[ỷy]/i))?r[1].replace(/x/g,"").replace(",",".")+" tỷ":(r=a.match(/([0-9]+(?:[.,][0-9]+)?)\s*tr[iệê]u/i))?r[1].replace(",",".")+" triệu":"Liên hệ"}function extractArea(e,t){var a=extractTag(t,"dientich");if(a)return a;var r=e.match(/(\d{2,5}(?:[.,]\d+)?)\s*m2/i);return r?r[1]+" m2":""}function extractLocation(e,t){var a=extractTag(t,"vitri");if(a)return a;for(var r=[/(quận\s*\d+)/i,/(q\.?\s*\d+)/i,/(gò vấp)/i,/(hóc môn)/i,/(củ chi)/i,/(tân bình)/i,/(tân phú)/i,/(thủ đức)/i,/(phường\s*[\w\d]+)/i,/(p\.?\s*[\w\d]+)/i],n=0;n<r.length;n++){var c=e.match(r[n]);if(c)return c[1]}return""}function extractType(e,t){var a=extractTag(t,"loai");if(a)return a;var r=e.toLowerCase();return r.includes("đất")?"Đất":r.includes("biệt thự")?"Biệt thự":r.includes("căn hộ")?"Căn hộ":r.includes("nhà vườn")?"Nhà vườn":r.includes("nhà")?"Nhà phố":"BĐS"}function extractBadge(e,t){var a=extractTag(e,"hot"),r=extractTag(e,"phaply"),n=[];return r&&n.push({text:r,cls:"badge-orange"}),!r&&/sổ đỏ|shr|shr/i.test(e+" "+t)&&n.push({text:"SHR",cls:"badge-orange"}),a&&n.push({text:a,cls:"badge-red"}),n}function shortTitle(e){return cleanTitle(e).replace(/(?:,\s*)?(giá|chỉ)\s*[0-9.,x]+\s*t[ỷy].*$/i,"").replace(/(?:,\s*)?[0-9.,x]+\s*t[ỷy].*$/i,"").replace(/(?:,\s*)?\d{2,5}(?:[.,]\d+)?\s*m2/gi,"").replace(/^bán\s+/i,"").replace(/\s{2,}/g," ").trim().replace(/[,\-–|:;]+$/,"")}function extractDesc(e){var t=e.summary&&e.summary.$t?e.summary.$t:"";!t&&e.content&&e.content.$t&&(t=e.content.$t);var a=extractTag(t,"mota");if(a)return a;var r=extractTag(t,"chitiet");return r||cleanText(t).slice(0,180)}function extractBloggerImage(e){var t="",a=e.content&&e.content.$t?e.content.$t:"";if(!a&&e.summary&&e.summary.$t&&(a=e.summary.$t),a){var r=a.match(/<img[^>]+src="([^"]+)"/gi);if(r)for(var n=0;n<r.length;n++){var c=r[n].match(/src="([^"]+)"/i);if(c&&c[1]&&-1!==c[1].indexOf("blogger.googleusercontent.com/img")){t=c[1];break}}}if(!t&&a){var i=a.match(/<a[^>]+href="([^"]+)"/gi);if(i)for(var s=0;s<i.length;s++){var l=i[s].match(/href="([^"]+)"/i);if(l&&l[1]&&-1!==l[1].indexOf("blogger.googleusercontent.com/img")&&/\.(jpg|jpeg|png|webp)(\?|$)/i.test(l[1])){t=l[1];break}}}return!t&&e.media$thumbnail&&e.media$thumbnail.url&&(t=e.media$thumbnail.url),t&&-1!==t.indexOf("blogger.googleusercontent.com/img")?t.replace("/s72-c/","/w600-h450-p-k-no-nu/").replace("/s600/","/w600-h450-p-k-no-nu/").replace("/s1280/","/w600-h450-p-k-no-nu/").replace("/s1600/","/w600-h450-p-k-no-nu/").replace("=s72-c","=w600-h450-p-k-no-nu").replace("=s600","=w600-h450-p-k-no-nu").replace("=s1280","=w600-h450-p-k-no-nu").replace("=s1600","=w600-h450-p-k-no-nu"):"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5I6M0c8ijHf-placeholder/w600/default-real-estate.jpg"}function esc(e){return(e||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}function renderBloggerFeed(e){var t=document.getElementById("app"),a=e&&e.feed&&e.feed.entry?e.feed.entry:[];if(!a.length)return t.className="empty",void(t.innerHTML="Không có bài viết nào.");for(var r='<div class="scroller" id="lb-scroller"><div class="row">',n=0;n<Math.min(a.length,12);n++){var c=a[n],i=cleanTitle(c.title&&c.title.$t?c.title.$t:"Không có tiêu đề"),s=c.content&&c.content.$t?c.content.$t:c.summary&&c.summary.$t?c.summary.$t:"",l="#";if(c.link)for(var o=0;o<c.link.length;o++)if("alternate"===c.link[o].rel){l=c.link[o].href;break}for(var g=extractBloggerImage(c),p=shortTitle(i),d=extractDesc(c),u=extractPrice(i,s),m=extractLocation(i,s),h=extractType(i,s),v=extractArea(i,s),f=extractBadge(s,i),x="",b=0;b<f.length;b++)x+='<span class="badge-chip '+f[b].cls+'">'+esc(f[b].text)+"</span>";x||(x='<span class="badge-chip badge-orange">Giá tốt</span>'),r+='<div class="card"><a class="thumb-wrap" href="'+l+'" target="_blank" rel="noopener noreferrer"><div class="badge-left">'+x+'</div><div class="badge-corner"><span>Giá rẻ</span></div><img class="thumb" src="'+g+'" alt="'+esc(p)+'"></a><div class="content"><a class="title" href="'+l+'" target="_blank" rel="noopener noreferrer">'+esc(p)+'</a><div class="desc">'+esc(d)+'</div><div class="meta"><div class="meta-row"><span class="meta-ico">📍</span><span>'+esc(m||"Đang cập nhật vị trí")+'</span></div><div class="meta-row"><span class="meta-ico">🏘️</span><span>Loại: '+esc(h||"BĐS")+'</span></div><div class="meta-row"><span class="meta-ico">📐</span><span>Diện tích: '+esc(v||"Liên hệ")+'</span></div></div><div class="sep"></div><div class="bottom"><div class="price">'+esc(u)+'</div><a class="btn" href="'+l+'" target="_blank" rel="noopener noreferrer">Xem thêm</a></div></div></div>'}r+="</div></div>",t.className="",t.innerHTML=r;var w=document.getElementById("lb-scroller");if(w){var T=!1,y=0,$=0,k=!1;w.addEventListener("mousedown",function(e){T=!0,k=!1,w.classList.add("dragging"),y=e.pageX,$=w.scrollLeft}),window.addEventListener("mouseup",function(){T=!1,w.classList.remove("dragging")}),w.addEventListener("mousemove",function(e){if(T){var t=e.pageX-y;Math.abs(t)>5&&(k=!0),w.scrollLeft=$-t,k&&e.preventDefault()}}),w.addEventListener("click",function(e){k&&(e.preventDefault(),e.stopPropagation())},!0)}}
+	</script>
+
+	<script src="https://long-bds.blogspot.com/feeds/posts/default/-/tin-tuc?alt=json-in-script&amp;callback=renderBloggerFeed&amp;max-results=4"></script>
+
+	<script>
+		!function(){var e=document.getElementById("footer-scroller");if(e){var t=!1,n=0,s=0,o=!1;e.addEventListener("mousedown",function(a){t=!0,o=!1,e.classList.add("dragging"),n=a.pageX,s=e.scrollLeft}),window.addEventListener("mouseup",a),e.addEventListener("mouseleave",a),e.addEventListener("touchend",a,{passive:!0}),e.addEventListener("mousemove",function(a){if(t){var i=a.pageX-n;Math.abs(i)>5&&(o=!0),e.scrollLeft=s-i,o&&a.preventDefault()}}),e.addEventListener("touchstart",function(t){t.touches&&t.touches.length&&(o=!1,n=t.touches[0].pageX,s=e.scrollLeft)},{passive:!0}),e.addEventListener("touchmove",function(t){if(t.touches&&t.touches.length){var a=t.touches[0].pageX-n;Math.abs(a)>5&&(o=!0),e.scrollLeft=s-a}},{passive:!0}),e.addEventListener("click",function(e){o&&(e.preventDefault(),e.stopPropagation())},!0)}function a(){t=!1,e.classList.remove("dragging")}}();
+	</script>
+
+
+</body>
+</html>
